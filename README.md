@@ -12,6 +12,6 @@ Automatic Gain Control (AGC) is a feedback loop used in receiver architectures f
 
 ### Architecture
 
-![architecture](doc/img/block_diagram.png)
+![architecture](docs/img/block_diagram.png)
 
 In order to achieve optimal amplification from the LNA, a digitally-stepped attenuator (DSA) is placed preceeding the LNA to attenuate any signal over a specific saturation threshold. 
