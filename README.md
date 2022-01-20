@@ -4,15 +4,14 @@
 
 ---
 
-| :exclamation: Important Note            |
-|-----------------------------------------|
+Automatic Gain Control project submission to the Google-funded Open-MPW program.
 
-## Please fill in your project documentation in this README.md file 
+## Introduction
 
+Automatic Gain Control (AGC) is a feedback loop used in receiver architectures for signal amplification. Its primary usage is in environments where the relative signal strength (RSS) is variable and could pose oversaturation on the receiving amplifier, such as that of radar recievers.
 
-:warning: | Use this sample project for analog user projects. 
-:---: | :---
+### Architecture
 
----
+![architecture](doc/img/block_diagram.png)
 
-Refer to [README](docs/source/index.rst) for this sample project documentation. 
+In order to achieve optimal amplification from the LNA, a digitally-stepped attenuator (DSA) is placed preceeding the LNA to attenuate any signal over a specific saturation threshold. 
