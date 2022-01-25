@@ -28,13 +28,13 @@ This AGC chip is part of a larger project; an FMCW radar for robotic application
 
 The digitally-stepped attenuator is comprised of 2 transmission gates and an inverter, effectively creating a SPDT switch. One throw leads to a fixed resistor value, the other goes directly to next stage. There are a total of 4 of these stages, each comprising a slightly higher attenuation than the previous stage. They are controlled via 4 control lines. It is setup in a pseudo-differential configuration to attenuate both phases. 
 
-## Low-Noise Amplifier
+### Low-Noise Amplifier
 
 ![lna](docs/img/lna_layout.png)
 
 The LNA is a fully-differential common-source amplfier with active loads and a tail current mirror. 
 
-## Power Detector
+### Power Detector
 
 ![pd](docs/img/pd_layout.png)
 
