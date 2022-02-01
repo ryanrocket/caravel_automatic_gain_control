@@ -1,0 +1,227 @@
+**.subckt compiled
+V1 net10 GND 1.8
+V2 net11 GND 0.5
+X1 __UNCONNECTED_PIN__0 __UNCONNECTED_PIN__1 net11 net10 out GND balaced-pd
+R2 out GND 500k m=1
+C2 out GND 200p m=1
+R1 net2 GND 1k m=1
+R3 net1 GND 1k m=1
+R4 net2 net3 800 m=1
+R5 net1 net4 800 m=1
+V5 net4 GND 1.8
+V6 net3 GND 1.8
+V7 net12 GND 1.8
+R6 net13 net5 250 m=1
+V8 net13 GND 1.8
+R7 net8 GND 13k m=1
+R8 net9 GND 13k m=1
+V9 net14 GND SIN(0 0.2 400000)
+V10 net15 GND SIN(0 0.2 400000 0 0 180)
+XLNA1 net2 net1 net12 GND net7 net6 net9 net5 net8 csfd-abstract
+C1 net2 net15 500u m=1
+C3 net1 net14 500u m=1
+XDSA1 __UNCONNECTED_PIN__2 __UNCONNECTED_PIN__3 __UNCONNECTED_PIN__4 __UNCONNECTED_PIN__5
++ __UNCONNECTED_PIN__6 __UNCONNECTED_PIN__7 __UNCONNECTED_PIN__8 __UNCONNECTED_PIN__9 __UNCONNECTED_PIN__10 dsa
+XDSA2 __UNCONNECTED_PIN__11 __UNCONNECTED_PIN__12 __UNCONNECTED_PIN__13 __UNCONNECTED_PIN__14
++ __UNCONNECTED_PIN__15 __UNCONNECTED_PIN__16 __UNCONNECTED_PIN__17 __UNCONNECTED_PIN__18 __UNCONNECTED_PIN__19 dsa
+**** begin user architecture code
+ ** manual skywater pdks install (with patches applied)
+* .lib /ef/tech/SW.2/sky130A/libs.tech/ngspice/models/sky130.lib.spice tt
+
+** opencircuitdesign pdks install
+.lib /ef/tech/SW.2/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+
+
+
+
+.tran 0.000001s 0.00001s
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  balaced-pd.sym # of pins=6
+* sym_path: /home/u5921_ryanwan/design/FB1/xschem/balaced-pd.sym
+* sch_path: /home/u5921_ryanwan/design/FB1/xschem/balaced-pd.sch
+.subckt balaced-pd  in1 in2 vbias vdd output gnd
+*.ipin vdd
+*.ipin gnd
+*.opin output
+*.ipin in1
+*.ipin in2
+*.ipin vbias
+**** begin user architecture code
+
+
+.tran 0.0005s 0.5s
+
+
+**** end user architecture code
+XM10 net2 net2 gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM11 output net3 vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM3 net2 net1 vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM4 net3 net3 vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM8 net1 net1 vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM1 net1 in1 gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM2 net3 net2 gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM5 net1 in2 gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM6 net2 vbias gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+.ends
+
+
+* expanding   symbol:  csfd-abstract.sym # of pins=9
+* sym_path: /home/u5921_ryanwan/design/FB1/xschem/csfd-abstract.sym
+* sch_path: /home/u5921_ryanwan/design/FB1/xschem/csfd-abstract.sch
+.subckt csfd-abstract  in1 in2 vdd gnd out1 out2 lc1 tc lc2
+*.ipin vdd
+*.ipin in1
+*.ipin in2
+*.ipin gnd
+*.opin out1
+*.opin out2
+*.ipin tc
+*.ipin lc1
+*.ipin lc2
+**** begin user architecture code
+
+
+.tran 0.000001s 0.00001s
+.plot v(drain1) v(drain2)
+
+
+**** end user architecture code
+XM9 out1 lc1 vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM10 out1 in1 source gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM2 lc2 lc2 vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM3 out2 lc2 vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM7 lc1 lc1 vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM1 source tc gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM4 tc tc gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM5 out2 in2 source gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+.ends
+
+
+* expanding   symbol:  dsa.sym # of pins=9
+* sym_path: /home/u5921_ryanwan/design/FB1/xschem/dsa.sym
+* sch_path: /home/u5921_ryanwan/design/FB1/xschem/dsa.sch
+.subckt dsa  in cntrl1 cntrl2 cntrl3 cntrl4 out vbias vdd gnd
+*.ipin cntrl1
+*.ipin cntrl2
+*.ipin cntrl3
+*.ipin cntrl4
+*.ipin in
+*.opin out
+*.ipin gnd
+*.ipin vbias
+*.ipin vdd
+**** begin user architecture code
+
+
+.tran 0.000001s 0.0001s
+.save all
+
+
+**** end user architecture code
+R1 net1 net2 50 m=1
+R2 net3 net4 200 m=1
+XDTG1 in cntrl1 vdd vbias gnd net2 net1 transgate-full
+XDTG2 net2 cntrl2 vdd vbias gnd net4 net3 transgate-full
+R3 net5 net6 1k m=1
+XDTG3 net4 cntrl3 vdd vbias gnd net6 net5 transgate-full
+R4 net7 out 10k m=1
+XDTG4 net6 cntrl4 vdd vbias gnd out net7 transgate-full
+.ends
+
+
+* expanding   symbol:  transgate-full.sym # of pins=7
+* sym_path: /home/u5921_ryanwan/design/FB1/xschem/transgate-full.sym
+* sch_path: /home/u5921_ryanwan/design/FB1/xschem/transgate-full.sch
+.subckt transgate-full  in cntrl vdd vbias gnd out2 out1
+*.ipin cntrl
+*.ipin vdd
+*.ipin in
+*.ipin gnd
+*.ipin vbias
+*.opin out2
+*.opin out1
+XI1 vdd gnd net1 cntrl basic-invert
+XTG1 in out1 gnd vbias net1 cntrl gate-switch
+XTG2 in out2 gnd vbias cntrl net1 gate-switch
+.ends
+
+
+* expanding   symbol:  basic-invert.sym # of pins=4
+* sym_path: /home/u5921_ryanwan/design/FB1/xschem/basic-invert.sym
+* sch_path: /home/u5921_ryanwan/design/FB1/xschem/basic-invert.sch
+.subckt basic-invert  vdd gnd out in
+*.ipin in
+*.ipin gnd
+*.ipin vdd
+*.opin out
+XM1 out in gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM2 out in vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+.ends
+
+
+* expanding   symbol:  gate-switch.sym # of pins=6
+* sym_path: /home/u5921_ryanwan/design/FB1/xschem/gate-switch.sym
+* sch_path: /home/u5921_ryanwan/design/FB1/xschem/gate-switch.sch
+.subckt gate-switch  in out gnd vbias cntrl2 cntrl1
+*.ipin in
+*.ipin vbias
+*.ipin gnd
+*.opin out
+*.ipin cntrl1
+*.ipin cntrl2
+XM5 in cntrl2 out vbias sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+XM6 out cntrl1 in gnd sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+.ends
+
+.GLOBAL GND
+** flattened .save nodes
+.end

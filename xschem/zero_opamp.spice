@@ -1,0 +1,111 @@
+**.subckt zero_opamp PLUS MINUS EN_N VSS VCC DIFFOUT ADJ
+*.ipin PLUS
+*.ipin MINUS
+*.ipin EN_N
+*.ipin VSS
+*.ipin VCC
+*.opin DIFFOUT
+*.ipin ADJ
+C6 G1 0 2f m=1
+XM4 net6 EN_N VCC VCC sky130_fd_pr__pfet_01v8 L=8 W=2 nf=1 ad='W * 0.29' as='W * 0.29' pd='W + 2 * 0.29'
++ ps='W + 2 * 0.29' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1 
+XM18 G2 G2 VSS VSS sky130_fd_pr__nfet_01v8_lvt L=4 W=2 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1 
+XM2 G1 G1 VSS VSS sky130_fd_pr__nfet_01v8_lvt L=4 W=2 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1 
+XM20 G2 PLUS net7 VCC sky130_fd_pr__pfet_01v8_lvt L=1 W=4 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1 
+XM6 G1 MINUS net8 VCC sky130_fd_pr__pfet_01v8_lvt L=1 W=4 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1 
+v1 SP net8 0
+C4 SP 0 2f m=1
+C1 G2 0 2f m=1
+C5 DIFFOUT 0 4f m=1
+XM11 DIFFOUT G2 net1 VSS sky130_fd_pr__nfet_01v8_lvt L=4 W=2 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1 
+v2 SP net7 0
+v4 net1 VSS 0
+v6 net6 SP 0
+XM7 DIFFOUT EN_N VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=3 m=3 
+XM46 net9 EN_N VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=5 nf=1 ad='W * 0.29' as='W * 0.29' pd='W + 2 * 0.29'
++ ps='W + 2 * 0.29' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1 
+v17 net9 net3 0
+XM53 net2 G1 VSS VSS sky130_fd_pr__nfet_01v8_lvt L=4 W=2 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1 
+XM54 net2 net2 net3 VCC sky130_fd_pr__pfet_01v8_lvt L=4 W=4 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1 
+XM55 DIFFOUT net2 net3 VCC sky130_fd_pr__pfet_01v8_lvt L=4 W=4 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1 
+XM8 G1 ADJ net4 VCC sky130_fd_pr__pfet_01v8_lvt L=1 W=1 nf=1 ad='W * 0.29' as='W * 0.29' pd='W + 2 * 0.29'
++ ps='W + 2 * 0.29' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1 
+XM9 G1 ADJ net5 VSS sky130_fd_pr__nfet_01v8_lvt L=1 W=0.5 nf=1 ad='W * 0.29' as='W * 0.29' pd='W + 2 * 0.29'
++ ps='W + 2 * 0.29' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1 
+XM10 net5 VCC VSS VSS sky130_fd_pr__nfet_01v8_lvt L=8 W=0.5 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1 
+XM1 net4 EN_N VCC VCC sky130_fd_pr__pfet_01v8 L=8 W=1 nf=1 ad='W * 0.29' as='W * 0.29' pd='W + 2 * 0.29'
++ ps='W + 2 * 0.29' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1 
+**** begin user architecture code
+
+.lib /ef/tech/SW.2/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+* Mismatch parameters
+* Resistor/ef/tech/SW.2/sky130A/libs.tech/ngspice/Capacitor
+* Special cells
+* All models
+* Corner
+
+**** end user architecture code
+**.ends
+**** begin user architecture code
+
+* .option SCALE=1e-6
+.option method=gear seed=12
+
+* this experimental option enables mos model bin
+* selection based on W/NF instead of W
+.option wnflag=1
+
+.param VCC=1.8
+* .param VCCGAUSS=agauss(1.8, 0.05, 1)
+* .param VCC=VCCGAUSS
+.param VDL=0.7
+.param ABSVAR=0.02
+.temp 25
+
+** to generate following file:
+** copy .../xschem_sky130/sky130_tests/stimuli.test_comparator to simulation directory
+** then do 'Simulation->Utile Stimuli Editor (GUI)' and press 'Translate'
+.include "stimuli_bandgap_opamp.cir"
+
+** variation marameters:
+* .param sky130_fd_pr__nfet_01v8_lvt__vth0_slope_spectre='agauss(0, ABSVAR, 3)/sky130_fd_pr__nfet_01v8_lvt__vth0_slope'
+* .param sky130_fd_pr__pfet_01v8_lvt__vth0_slope_spectre='agauss(0, ABSVAR, 3)/sky130_fd_pr__pfet_01v8_lvt__vth0_slope'
+
+* .tran 0.1n 900n uic
+
+.control
+  let run=1
+  dowhile run <= 1
+    if run > 1
+      reset
+      set appendwrite
+    end
+    save all
+    * save saout cal i(vvcc) en plus minus
+    tran 1n 10000n uic
+    plot saout
+    plot plus minus
+    write bandgap_opamp.raw
+    let run = run + 1
+  end
+.endc
+
+
+**** end user architecture code
+** flattened .save nodes
+.save I(v1)
+.save I(v2)
+.save I(v4)
+.save I(v6)
+.save I(v17)
+.end

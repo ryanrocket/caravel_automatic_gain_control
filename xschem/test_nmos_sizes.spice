@@ -1,0 +1,54 @@
+**.subckt test_nmos_sizes
+XM1 D1 G 0 VSS sky130_fd_pr__nfet_01v8_lvt L=L W=1 nf=1 ad='W * 0.29' as='W * 0.29' pd='2 * (W + 0.29)'
++ ps='2 * (W + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
+XM2 D2 G 0 VSS sky130_fd_pr__nfet_01v8_lvt L=0.15 W=W nf=1 ad='W * 0.29' as='W * 0.29' pd='2 * (W + 0.29)'
++ ps='2 * (W + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1 
+V2 D D2 0
+V1 D D1 0
+**** begin user architecture code
+ ** manual skywater pdks install (with patches applied)
+* .lib /ef/tech/SW.2/sky130A/libs.tech/ngspice/models/sky130.lib.spice tt
+
+** opencircuitdesign pdks install
+.lib /ef/tech/SW.2/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+
+**** end user architecture code
+**.ends
+**** begin user architecture code
+
+* .option SCALE=1e-6
+.option method=gear seed=12
+.param L=0.15
+.param W=0.5
+
+vd d 0 0
+vg g 0 0
+.control
+dc vd 0 2 0.01 vg 0 2 0.2
+alterparam L=0.18
+alterparam W=1
+reset
+dc vd 0 2 0.01 vg 0 2 0.2
+alterparam L=0.3
+alterparam W=2
+reset
+dc vd 0 2 0.01 vg 0 2 0.2
+alterparam L=0.5
+alterparam W=3
+reset
+dc vd 0 2 0.01 vg 0 2 0.2
+
+.endc
+
+
+
+
+
+**** end user architecture code
+** flattened .save nodes
+.save I(V2)
+.save I(V1)
+.end

@@ -1,0 +1,38 @@
+**.subckt cs3v3-abstract
+V1 net1 GND SIN(0 0.8 40)
+C1 net2 net1 28u m=1
+R1 net2 GND 100 m=1
+R2 net6 net2 500 m=1
+R3 net3 GND 0 m=1
+C2 net3 GND 28u m=1
+R4 net5 net4 400k m=1
+V2 net5 GND 5
+V3 net6 GND 1.8
+XM1 net4 net2 net3 GND sky130_fd_pr__nfet_05v0_nvt L=4 W=10 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1 
+**** begin user architecture code
+ ** manual skywater pdks install (with patches applied)
+* .lib /ef/tech/SW.2/sky130A/libs.tech/ngspice/models/sky130.lib.spice tt
+
+** opencircuitdesign pdks install
+.lib /ef/tech/SW.2/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+
+
+
+.tran 0.001s 0.1s
+.control
+  run
+  plot v(net4) v(net2)
+.endc
+.save all
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+** flattened .save nodes
+.end
