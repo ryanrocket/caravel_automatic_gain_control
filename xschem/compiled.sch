@@ -1,138 +1,136 @@
-v {xschem version=2.9.9 file_version=1.2 }
+v {xschem version=3.0.0 file_version=1.2 }
 G {}
 K {}
 V {}
 S {}
 E {}
-N 1720 -720 1750 -720 { lab=out}
-N 1830 -720 1830 -700 { lab=out}
-N 1750 -720 1750 -700 { lab=out}
-N 1750 -720 1860 -720 { lab=out}
-N 1750 -640 1750 -620 { lab=GND}
-N 1830 -640 1830 -620 { lab=GND}
-N 850 -360 880 -360 { lab=#net1}
-N 850 -460 850 -410 { lab=#net2}
-N 850 -420 880 -420 { lab=#net2}
-N 850 -370 850 -320 { lab=#net1}
-N 750 -440 850 -440 { lab=#net2}
-N 750 -340 850 -340 { lab=#net1}
-N 790 -480 790 -460 { lab=#net3}
-N 790 -320 790 -300 { lab=#net4}
-N 750 -440 750 -420 { lab=#net2}
-N 690 -420 750 -420 { lab=#net2}
-N 750 -360 750 -340 { lab=#net1}
-N 690 -360 750 -360 { lab=#net1}
-N 1100 -390 1120 -390 { lab=#net5}
-N 1100 -370 1100 -340 { lab=#net6}
-N 1100 -340 1220 -340 { lab=#net6}
-N 1100 -440 1100 -410 { lab=#net7}
-N 1100 -440 1220 -440 { lab=#net7}
-N 1090 -280 1110 -280 { lab=GND}
-N 1010 -280 1030 -280 { lab=#net8}
-N 1010 -300 1010 -280 { lab=#net8}
-N 1090 -500 1110 -500 { lab=GND}
-N 1010 -500 1030 -500 { lab=#net9}
-N 1010 -500 1010 -480 { lab=#net9}
-N 970 -300 970 -280 { lab=GND}
-C {devices/gnd.sym} 1630 -660 0 0 {name=l1 lab=GND}
-C {devices/vsource.sym} 1660 -810 2 0 {name=V1 value="1.8"}
-C {devices/gnd.sym} 1660 -840 2 0 {name=l2 lab=GND}
-C {devices/vsource.sym} 1590 -810 2 0 {name=V2 value="0.5"}
-C {devices/gnd.sym} 1590 -840 2 0 {name=l3 lab=GND}
-C {devices/lab_wire.sym} 1860 -720 2 0 {name=out sig_type=std_logic lab=out}
-C {devices/code.sym} 320 -310 0 0 {name=TT_MODELS
-only_toplevel=true
-format="tcleval( @value )"
-value="** manual skywater pdks install (with patches applied)
-* .lib \\\\$::SKYWATER_MODELS\\\\/models/sky130.lib.spice tt
-
-** opencircuitdesign pdks install
-.lib \\\\$::SKYWATER_MODELS\\\\/sky130.lib.spice tt
-
-.param mc_mm_switch=0
-.param mc_pr_switch=0
-"
-spice_ignore=false}
-C {devices/code.sym} 320 -460 0 0 {name="pepper, chilli, cinnamon" only_toplevel=false value="
-
-.tran 0.000001s 0.00001s
-"}
-C {balaced-pd.sym} 1480 -620 0 0 {name=X1}
-C {devices/res.sym} 1830 -670 0 0 {name=R2
-value=500k
+N 1230 -340 1230 -320 {
+lab=GND}
+N 1230 -540 1230 -520 {lab=#net1}
+N 1270 -340 1270 -320 {
+lab=#net2}
+N 1270 -320 1290 -320 {
+lab=#net2}
+N 1350 -320 1370 -320 {
+lab=GND}
+N 1270 -540 1270 -520 {
+lab=#net3}
+N 1270 -540 1290 -540 {
+lab=#net3}
+N 1350 -540 1370 -540 {
+lab=GND}
+N 1360 -430 1380 -430 {
+lab=#net4}
+N 1120 -400 1140 -400 {
+lab=#net5}
+N 1120 -400 1120 -340 {
+lab=#net5}
+N 1120 -460 1140 -460 {
+lab=#net6}
+N 1120 -520 1120 -460 {
+lab=#net6}
+N 1010 -520 1120 -520 {
+lab=#net6}
+N 1010 -340 1120 -340 {
+lab=#net5}
+N 1050 -430 1070 -430 {
+lab=#net7}
+N 1070 -450 1070 -430 {
+lab=#net7}
+N 1070 -430 1070 -410 {
+lab=#net7}
+N 1070 -520 1070 -510 {
+lab=#net6}
+N 1070 -350 1070 -340 {
+lab=#net5}
+N 1070 -340 1070 -320 {
+lab=#net5}
+N 1070 -540 1070 -520 {
+lab=#net6}
+N 1360 -450 1380 -450 {
+lab=#net8}
+N 1360 -410 1380 -410 {
+lab=#net9}
+N 1380 -480 1380 -450 {
+lab=#net8}
+N 1380 -480 1530 -480 {
+lab=#net8}
+N 1380 -410 1380 -380 {
+lab=#net9}
+N 1380 -380 1530 -380 {
+lab=#net9}
+N 930 -520 950 -520 {
+lab=#net10}
+N 930 -340 950 -340 {
+lab=#net11}
+N 900 -520 930 -520 {
+lab=#net10}
+N 900 -340 930 -340 {
+lab=#net11}
+N 600 -440 600 -420 {
+lab=#net12}
+N 720 -440 720 -420 {
+lab=#net13}
+N 480 -440 480 -420 {
+lab=#net14}
+N 360 -440 360 -420 {
+lab=#net15}
+C {/Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/lownoiseamplifier/csfd-abstract.sym} 1060 -320 0 0 {name=XLNA1}
+C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 1230 -320 0 0 {name=l1 lab=GND}
+C {/Users/ryanwans/xschem/xschem_library/devices/vsource.sym} 1230 -570 2 0 {name=V1 value="1.8"}
+C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 1230 -600 2 0 {name=l2 lab=GND}
+C {res.sym} 1320 -320 1 0 {name=R1
+value=13k
 footprint=1206
 device=resistor
 m=1}
-C {devices/capa.sym} 1750 -670 0 0 {name=C2
-m=1
-value=200p
-footprint=1206
-device="ceramic capacitor"}
-C {devices/gnd.sym} 1750 -620 0 0 {name=l6 lab=GND}
-C {devices/gnd.sym} 1830 -620 0 0 {name=l7 lab=GND}
-C {devices/res.sym} 820 -410 1 0 {name=R1
-value=1k
+C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 1370 -320 3 0 {name=l3 lab=GND}
+C {res.sym} 1320 -540 1 1 {name=R2
+value=13k
 footprint=1206
 device=resistor
 m=1}
-C {devices/res.sym} 820 -370 1 1 {name=R3
-value=1k
-footprint=1206
-device=resistor
-m=1}
-C {devices/res.sym} 820 -460 1 0 {name=R4
-value=800
-footprint=1206
-device=resistor
-m=1}
-C {devices/res.sym} 820 -320 1 1 {name=R5
-value=800
-footprint=1206
-device=resistor
-m=1}
-C {devices/vsource.sym} 760 -300 1 0 {name=V5 value="1.8"}
-C {devices/gnd.sym} 730 -300 1 0 {name=l8 lab=GND}
-C {devices/vsource.sym} 760 -480 1 0 {name=V6 value="1.8"}
-C {devices/gnd.sym} 730 -480 1 0 {name=l9 lab=GND}
-C {devices/gnd.sym} 790 -370 1 0 {name=l10 lab=GND}
-C {devices/gnd.sym} 790 -410 1 0 {name=l11 lab=GND}
-C {devices/gnd.sym} 970 -280 0 0 {name=l12 lab=GND}
-C {devices/vsource.sym} 970 -510 2 0 {name=V7 value="1.8"}
-C {devices/gnd.sym} 970 -540 2 0 {name=l13 lab=GND}
-C {devices/res.sym} 1150 -390 1 1 {name=R6
+C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 1370 -540 3 1 {name=l4 lab=GND}
+C {res.sym} 1410 -430 1 0 {name=R3
 value=250
 footprint=1206
 device=resistor
 m=1}
-C {devices/vsource.sym} 1210 -390 3 0 {name=V8 value="1.8"}
-C {devices/gnd.sym} 1240 -390 3 0 {name=l14 lab=GND}
-C {devices/res.sym} 1060 -280 3 0 {name=R7
-value=13k
+C {/Users/ryanwans/xschem/xschem_library/devices/vsource.sym} 1470 -430 3 0 {name=V2 value="1.8"}
+C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 1500 -430 3 0 {name=l5 lab=GND}
+C {/Users/ryanwans/xschem/xschem_library/devices/vsource.sym} 1020 -430 1 0 {name=V3 value="1.8"}
+C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 990 -430 1 0 {name=l6 lab=GND}
+C {res.sym} 1070 -480 2 0 {name=R4
+value=800
 footprint=1206
 device=resistor
 m=1}
-C {devices/gnd.sym} 1110 -280 3 0 {name=l15 lab=GND}
-C {devices/res.sym} 1060 -500 3 1 {name=R8
-value=13k
+C {res.sym} 1070 -380 0 0 {name=R5
+value=800
 footprint=1206
 device=resistor
 m=1}
-C {devices/gnd.sym} 1110 -500 3 1 {name=l16 lab=GND}
-C {devices/vsource.sym} 600 -360 1 0 {name=V9 value="SIN(0 0.2 400000)"}
-C {devices/vsource.sym} 600 -420 1 1 {name=V10 value="SIN(0 0.2 400000 0 0 180)"}
-C {devices/gnd.sym} 570 -420 1 0 {name=l17 lab=GND}
-C {devices/gnd.sym} 570 -360 1 0 {name=l18 lab=GND}
-C {csfd-abstract.sym} 800 -280 0 0 {name=XLNA1}
-C {devices/capa.sym} 660 -420 1 0 {name=C1
+C {res.sym} 1070 -570 2 0 {name=R6
+value=1k
+footprint=1206
+device=resistor
+m=1}
+C {res.sym} 1070 -290 0 0 {name=R7
+value=1k
+footprint=1206
+device=resistor
+m=1}
+C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 1070 -600 2 0 {name=l7 lab=GND}
+C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 1070 -260 0 0 {name=l8 lab=GND}
+C {capa.sym} 980 -520 3 0 {name=C1
 m=1
 value=500u
 footprint=1206
 device="ceramic capacitor"}
-C {devices/capa.sym} 660 -360 1 0 {name=C3
+C {capa.sym} 980 -340 3 0 {name=C2
 m=1
 value=500u
 footprint=1206
 device="ceramic capacitor"}
-C {dsa.sym} 1140 -250 0 0 {name=XDSA1}
-C {dsa.sym} 1140 -530 2 1 {name=XDSA2}
-C {devices/title-2.sym} 80 -70 0 0 {name=l4 author="Ryan Wans" rev=1.0}
+C {/Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/attenuator/dsa.sym} 160 -100 0 0 {name=XDSA1}
+C {/Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/attenuator/dsa.sym} 160 -760 2 1 {name=XDSA2}
