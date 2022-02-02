@@ -55,14 +55,15 @@ N 600 -110 600 -70 { lab=vdd}
 N 920 -110 920 -70 { lab=vdd}
 N 1240 -110 1240 -70 { lab=vdd}
 N 200 -70 1240 -70 { lab=vdd}
-C {code.sym} -130 -330 0 0 {name=sT_MODELS
+C {code.sym} 30 -380 0 0 {name=sT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
 value="** manual skywater pdks install (with patches applied)
-* .lib \\\\$::SKYWATER_MODELS\\\\/models/sky130.lib.spice tt
+* .lib \\\\$::SKYWATER_MODELS\\\\/models/sky130.lib.spice tt\\
+*** remove the /models/
 
 ** opencircuitdesign pdks install
-.lib \\\\$::SKYWATER_MODELS\\\\/sky130.lib.spice tt
+.lib /Volumes/WORK_DRIVE/open_pdks/sky130/custom/models/sky130.lib.spice tt
 
 .param mc_mm_switch=0
 .param mc_pr_switch=0

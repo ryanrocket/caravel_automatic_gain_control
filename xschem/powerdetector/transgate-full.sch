@@ -44,6 +44,19 @@ N 860 -450 860 -190 { lab=vbias}
 N 820 -190 860 -190 { lab=vbias}
 N 740 -320 740 -300 { lab=gnd}
 N 850 -190 850 -170 { lab=vbias}
+C {code.sym} 140 -470 0 0 {name=sT_MODELS
+only_toplevel=true
+format="tcleval( @value )"
+value="** manual skywater pdks install (with patches applied)
+* .lib \\\\$::SKYWATER_MODELS\\\\/models/sky130.lib.spice tt
+
+** opencircuitdesign pdks install
+.lib \\\\$::SKYWATER_MODELS\\\\/sky130.lib.spice tt
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+"
+spice_ignore=false}
 C {basic-invert.sym} 550 -220 0 0 {name=XI1}
 C {gate-switch.sym} 660 -310 0 0 {name=XTG1}
 C {gate-switch.sym} 660 -50 0 0 {name=XTG2}
@@ -54,17 +67,3 @@ C {ipin.sym} 740 -300 3 0 {name=pnd lab=gnd}
 C {ipin.sym} 850 -170 3 0 {name=pbias lab=vbias}
 C {opin.sym} 1020 -250 0 0 {name=put2 lab=out2}
 C {opin.sym} 1020 -510 0 0 {name=put1 lab=out1}
-C {code.sym} 230 -340 0 0 {name=sT_MODELS
-only_toplevel=true
-format="tcleval( @value )"
-value="** manual skywater pdks install (with patches applied)
-* .lib \\\\$::SKYWATER_MODELS\\\\/models/sky130.lib.spice tt\\
-*** remove the /models/
-
-** opencircuitdesign pdks install
-.lib /Volumes/WORK_DRIVE/open_pdks/sky130/custom/models/sky130.lib.spice tt
-
-.param mc_mm_switch=0
-.param mc_pr_switch=0
-"
-spice_ignore=false}

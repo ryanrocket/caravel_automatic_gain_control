@@ -21,31 +21,19 @@ N 1610 -760 1630 -760 {
 lab=GND}
 N 1620 -650 1640 -650 {
 lab=#net4}
-N 1380 -620 1400 -620 {
+N 460 -650 480 -650 {
 lab=#net5}
-N 1380 -620 1380 -560 {
+N 480 -670 480 -650 {
 lab=#net5}
-N 1380 -680 1400 -680 {
-lab=#net6}
-N 1380 -740 1380 -680 {
-lab=#net6}
-N 1270 -740 1380 -740 {
-lab=#net6}
-N 1270 -560 1380 -560 {
+N 480 -650 480 -630 {
 lab=#net5}
-N 1310 -650 1330 -650 {
+N 480 -740 480 -730 {
+lab=#net6}
+N 480 -570 480 -560 {
 lab=#net7}
-N 1330 -670 1330 -650 {
+N 480 -560 480 -540 {
 lab=#net7}
-N 1330 -650 1330 -630 {
-lab=#net7}
-N 1330 -740 1330 -730 {
-lab=#net6}
-N 1330 -570 1330 -560 {
-lab=#net5}
-N 1330 -560 1330 -540 {
-lab=#net5}
-N 1330 -760 1330 -740 {
+N 480 -760 480 -740 {
 lab=#net6}
 N 1620 -670 1640 -670 {
 lab=#net8}
@@ -59,22 +47,16 @@ N 1640 -630 1640 -600 {
 lab=#net9}
 N 1640 -600 1790 -600 {
 lab=#net9}
-N 1190 -740 1210 -740 {
-lab=#net10}
-N 1190 -560 1210 -560 {
-lab=#net11}
 N 1160 -740 1190 -740 {
 lab=#net10}
-N 1160 -560 1190 -560 {
-lab=#net11}
 N 860 -660 860 -640 {
-lab=#net12}
+lab=#net11}
 N 980 -660 980 -640 {
-lab=#net13}
+lab=#net12}
 N 740 -660 740 -640 {
-lab=#net14}
+lab=#net13}
 N 620 -660 620 -640 {
-lab=#net15}
+lab=#net14}
 N 1840 -660 1860 -660 {
 lab=#net8}
 N 1840 -640 1860 -640 {
@@ -92,43 +74,55 @@ lab=#net8}
 N 1780 -600 1780 -520 {
 lab=#net9}
 N 2050 -650 2080 -650 {
-lab=#net16}
+lab=#net15}
 N 2080 -650 2080 -630 {
-lab=#net16}
+lab=#net15}
 N 2080 -650 2120 -650 {
-lab=#net16}
+lab=#net15}
 N 2140 -650 2140 -630 {
-lab=#net16}
+lab=#net15}
 N 2120 -650 2140 -650 {
-lab=#net16}
+lab=#net15}
 N 2080 -570 2080 -550 {
 lab=GND}
 N 2140 -570 2140 -550 {
 lab=GND}
 N 2140 -650 2180 -650 {
-lab=#net16}
-N 580 -660 620 -660 {
 lab=#net15}
+N 580 -660 620 -660 {
+lab=#net14}
 N 740 -680 740 -660 {
-lab=#net14}
+lab=#net13}
 N 580 -680 740 -680 {
-lab=#net14}
+lab=#net13}
 N 860 -640 860 -630 {
-lab=#net12}
+lab=#net11}
 N 610 -630 860 -630 {
-lab=#net12}
+lab=#net11}
 N 610 -640 610 -630 {
-lab=#net12}
+lab=#net11}
 N 580 -640 610 -640 {
-lab=#net12}
+lab=#net11}
 N 580 -620 980 -620 {
-lab=#net13}
+lab=#net12}
 N 980 -640 980 -620 {
-lab=#net13}
-N 460 -740 560 -740 {
+lab=#net12}
+N 530 -740 560 -740 {
+lab=#net6}
+N 530 -560 560 -560 {
+lab=#net7}
+N 380 -740 390 -740 {
+lab=#net16}
+N 380 -560 400 -560 {
 lab=#net17}
-N 460 -560 560 -560 {
-lab=#net18}
+N 470 -560 530 -560 {
+lab=#net7}
+N 460 -560 470 -560 {
+lab=#net7}
+N 460 -740 530 -740 {
+lab=#net6}
+N 390 -740 400 -740 {
+lab=#net16}
 C {/Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/lownoiseamplifier/csfd-abstract.sym} 1320 -540 0 0 {name=XLNA1}
 C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 1490 -540 0 0 {name=l1 lab=GND}
 C {/Users/ryanwans/xschem/xschem_library/devices/vsource.sym} 1490 -790 2 0 {name=V1 value="1.8"}
@@ -152,40 +146,29 @@ device=resistor
 m=1}
 C {/Users/ryanwans/xschem/xschem_library/devices/vsource.sym} 1730 -650 3 0 {name=V2 value="1.8"}
 C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 1760 -650 3 0 {name=l5 lab=GND}
-C {/Users/ryanwans/xschem/xschem_library/devices/vsource.sym} 1280 -650 1 0 {name=V3 value="1.8"}
-C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 1250 -650 1 0 {name=l6 lab=GND}
-C {res.sym} 1330 -700 2 0 {name=R4
+C {/Users/ryanwans/xschem/xschem_library/devices/vsource.sym} 430 -650 1 0 {name=V3 value="1.8"}
+C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 400 -650 1 0 {name=l6 lab=GND}
+C {res.sym} 480 -700 2 0 {name=R4
 value=800
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 1330 -600 0 0 {name=R5
+C {res.sym} 480 -600 0 0 {name=R5
 value=800
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 1330 -790 2 0 {name=R6
+C {res.sym} 480 -790 2 0 {name=R6
 value=1k
 footprint=1206
 device=resistor
 m=1}
-C {res.sym} 1330 -510 0 0 {name=R7
+C {res.sym} 480 -510 0 0 {name=R7
 value=1k
 footprint=1206
 device=resistor
 m=1}
-C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 1330 -820 2 0 {name=l7 lab=GND}
-C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 1330 -480 0 0 {name=l8 lab=GND}
-C {capa.sym} 1240 -740 3 0 {name=C1
-m=1
-value=500u
-footprint=1206
-device="ceramic capacitor"}
-C {capa.sym} 1240 -560 3 0 {name=C2
-m=1
-value=500u
-footprint=1206
-device="ceramic capacitor"}
+C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 480 -820 2 0 {name=l7 lab=GND}
 C {/Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/attenuator/dsa.sym} 420 -320 0 0 {name=XDSA1}
 C {/Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/attenuator/dsa.sym} 420 -980 2 1 {name=XDSA2}
 C {/Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/powerdetector/balaced-pd.sym} 1810 -550 0 0 {name=X1}
@@ -216,7 +199,18 @@ C {/Users/ryanwans/xschem/xschem_library/devices/vsource.sym} 920 -850 2 0 {name
 C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 920 -880 2 0 {name=V9 value="1.4"}
 C {/Users/ryanwans/xschem/xschem_library/devices/vsource.sym} 920 -450 0 0 {name=V10 value="1.4"}
 C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 920 -420 0 0 {name=V11 value="1.4"}
-C {/Users/ryanwans/xschem/xschem_library/devices/vsource.sym} 430 -740 1 0 {name=V12 value="SIN(0.2 0.2 40000 0 0 180)"}
-C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 400 -740 1 0 {name=V13 value="1.4"}
-C {/Users/ryanwans/xschem/xschem_library/devices/vsource.sym} 430 -560 1 0 {name=V14 value="SIN(0.2 0.2 40000)"}
-C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 400 -560 1 0 {name=V15 value="1.4"}
+C {/Users/ryanwans/xschem/xschem_library/devices/vsource.sym} 350 -740 1 0 {name=V12 value="SIN(0.2 0.2 40000 0 0 180)"}
+C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 320 -740 1 0 {name=V13 value="1.4"}
+C {/Users/ryanwans/xschem/xschem_library/devices/vsource.sym} 350 -560 1 0 {name=V14 value="SIN(0.2 0.2 40000)"}
+C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 320 -560 1 0 {name=V15 value="1.4"}
+C {capa.sym} 430 -740 3 0 {name=C4
+m=1
+value=500u
+footprint=1206
+device="ceramic capacitor"}
+C {capa.sym} 430 -560 3 0 {name=C1
+m=1
+value=500u
+footprint=1206
+device="ceramic capacitor"}
+C {/Users/ryanwans/xschem/xschem_library/devices/gnd.sym} 480 -480 0 0 {name=l18 lab=GND}

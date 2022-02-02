@@ -51,3 +51,17 @@ C {ipin.sym} 300 -180 2 0 {name=pnd lab=gnd}
 C {opin.sym} 400 -210 0 0 {name=put lab=out}
 C {ipin.sym} 255 -100 3 0 {name=pntrl1 lab=cntrl1}
 C {ipin.sym} 255 -325 1 0 {name=pntrl2 lab=cntrl2}
+C {code.sym} 480 -140 0 0 {name=sT_MODELS
+only_toplevel=true
+format="tcleval( @value )"
+value="** manual skywater pdks install (with patches applied)
+* .lib \\\\$::SKYWATER_MODELS\\\\/models/sky130.lib.spice tt\\
+*** remove the /models/
+
+** opencircuitdesign pdks install
+.lib /Volumes/WORK_DRIVE/open_pdks/sky130/custom/models/sky130.lib.spice tt
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+"
+spice_ignore=false}
