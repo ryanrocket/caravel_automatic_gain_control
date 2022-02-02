@@ -25,10 +25,16 @@ This AGC chip is part of a larger project; an FMCW radar for robotic application
 
 ![dsa](docs/img/dsa_layout.png) 
 
+This pseudo-differential DSA consists of 4 fixed-attenuation stages, each with SPDT transmission gates to either pass the input signal into the resistor or through to the next stage. The attenuation increases in each stage. 
+
 ### Low-Noise Amplifier 
 
 ![lna](docs/img/lna_layout.png) 
 
+Fully differential common-source amplifier with active loads and tail current mirror. 
+
 ### Power Detector 
 
 ![pd](docs/img/pd_layout.png)
+
+Takes the differential input and creates a self-mixed DC current, which gets mirrors and converted into a voltage.
