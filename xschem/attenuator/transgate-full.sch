@@ -1,4 +1,4 @@
-v {xschem version=2.9.9 file_version=1.2 }
+v {xschem version=3.0.0 file_version=1.2 }
 G {}
 K {}
 V {}
@@ -44,7 +44,7 @@ N 860 -450 860 -190 { lab=vbias}
 N 820 -190 860 -190 { lab=vbias}
 N 740 -320 740 -300 { lab=gnd}
 N 850 -190 850 -170 { lab=vbias}
-C {devices/code.sym} 140 -470 0 0 {name=TT_MODELS
+C {code.sym} 140 -470 0 0 {name=sT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
 value="** manual skywater pdks install (with patches applied)
@@ -60,10 +60,10 @@ spice_ignore=false}
 C {basic-invert.sym} 550 -220 0 0 {name=XI1}
 C {gate-switch.sym} 660 -310 0 0 {name=XTG1}
 C {gate-switch.sym} 660 -50 0 0 {name=XTG2}
-C {devices/ipin.sym} 590 -380 0 0 {name=cntrl lab=cntrl}
-C {devices/ipin.sym} 710 -440 1 0 {name=vdd lab=vdd}
-C {devices/ipin.sym} 400 -380 0 0 {name=in lab=in}
-C {devices/ipin.sym} 740 -300 3 0 {name=gnd lab=gnd}
-C {devices/ipin.sym} 850 -170 3 0 {name=vbias lab=vbias}
-C {devices/opin.sym} 1020 -250 0 0 {name=out2 lab=out2}
-C {devices/opin.sym} 1020 -510 0 0 {name=out1 lab=out1}
+C {ipin.sym} 590 -380 0 0 {name=pntrl lab=cntrl}
+C {ipin.sym} 710 -440 1 0 {name=pdd lab=vdd}
+C {ipin.sym} 400 -380 0 0 {name=pn lab=in}
+C {ipin.sym} 740 -300 3 0 {name=pnd lab=gnd}
+C {ipin.sym} 850 -170 3 0 {name=pbias lab=vbias}
+C {opin.sym} 1020 -250 0 0 {name=put2 lab=out2}
+C {opin.sym} 1020 -510 0 0 {name=put1 lab=out1}

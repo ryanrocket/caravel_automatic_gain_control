@@ -1,4 +1,4 @@
-v {xschem version=2.9.9 file_version=1.2 }
+v {xschem version=3.0.0 file_version=1.2 }
 G {}
 K {}
 V {}
@@ -16,8 +16,8 @@ N 255 -270 255 -245 { lab=vbias}
 N 255 -180 255 -155 { lab=gnd}
 N 255 -180 300 -180 { lab=gnd}
 N 255 -115 255 -100 { lab=cntrl1}
-N 255 -325 255 -310 { lab=cntrl1}
-C {sky130_fd_pr/pfet_01v8.sym} 255 -290 1 0 {name=M5
+N 255 -325 255 -310 { lab=cntrl2}
+C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_01v8.sym} 255 -290 1 0 {name=M5
 L=0.15
 W=1
 nf=1
@@ -31,7 +31,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/nfet_01v8.sym} 255 -135 1 1 {name=M6
+C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} 255 -135 1 1 {name=M6
 L=0.15
 W=1
 nf=1 
@@ -45,9 +45,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/ipin.sym} 120 -210 0 0 {name=in lab=in}
-C {devices/ipin.sym} 255 -245 3 0 {name=vbias lab=vbias}
-C {devices/ipin.sym} 300 -180 2 0 {name=gnd lab=gnd}
-C {devices/opin.sym} 400 -210 0 0 {name=out lab=out}
-C {devices/ipin.sym} 255 -100 3 0 {name=cntrl1 lab=cntrl1}
-C {devices/ipin.sym} 255 -325 1 0 {name=cntrl2 lab=cntrl2}
+C {ipin.sym} 120 -210 0 0 {name=pn lab=in}
+C {ipin.sym} 255 -245 3 0 {name=pbias lab=vbias}
+C {ipin.sym} 300 -180 2 0 {name=pnd lab=gnd}
+C {opin.sym} 400 -210 0 0 {name=put lab=out}
+C {ipin.sym} 255 -100 3 0 {name=pntrl1 lab=cntrl1}
+C {ipin.sym} 255 -325 1 0 {name=pntrl2 lab=cntrl2}

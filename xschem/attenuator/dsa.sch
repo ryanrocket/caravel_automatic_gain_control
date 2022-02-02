@@ -1,4 +1,4 @@
-v {xschem version=2.9.9 file_version=1.2 }
+v {xschem version=3.0.0 file_version=1.2 }
 G {}
 K {}
 V {}
@@ -50,12 +50,12 @@ N 960 -110 960 -90 { lab=vbias}
 N 960 -90 1280 -90 { lab=vbias}
 N 1280 -110 1280 -90 { lab=vbias}
 N 200 -90 320 -90 { lab=vbias}
-N 280 -110 280 -70 { lab=gnd}
-N 600 -110 600 -70 { lab=gnd}
-N 920 -110 920 -70 { lab=gnd}
-N 1240 -110 1240 -70 { lab=gnd}
-N 200 -70 1240 -70 { lab=gnd}
-C {devices/code.sym} -130 -330 0 0 {name=TT_MODELS
+N 280 -110 280 -70 { lab=vdd}
+N 600 -110 600 -70 { lab=vdd}
+N 920 -110 920 -70 { lab=vdd}
+N 1240 -110 1240 -70 { lab=vdd}
+N 200 -70 1240 -70 { lab=vdd}
+C {code.sym} -130 -330 0 0 {name=sT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
 value="** manual skywater pdks install (with patches applied)
@@ -68,40 +68,36 @@ value="** manual skywater pdks install (with patches applied)
 .param mc_pr_switch=0
 "
 spice_ignore=false}
-C {devices/code.sym} -130 -180 0 0 {name=NGSPICE only_toplevel=false value="
-.tran 0.000001s 0.0001s
-.save all
-"}
-C {devices/res.sym} 470 -190 3 0 {name=R1
+C {res.sym} 470 -190 3 0 {name=R1
 value=50
 footprint=1206
 device=resistor
 m=1}
-C {devices/res.sym} 790 -190 3 0 {name=R2
+C {res.sym} 790 -190 3 0 {name=R2
 value=200
 footprint=1206
 device=resistor
 m=1}
 C {transgate-full.sym} 40 50 0 0 {name=XDTG1}
 C {transgate-full.sym} 360 50 0 0 {name=XDTG2}
-C {devices/res.sym} 1110 -190 3 0 {name=R3
+C {res.sym} 1110 -190 3 0 {name=R3
 value=1k
 footprint=1206
 device=resistor
 m=1}
 C {transgate-full.sym} 680 50 0 0 {name=XDTG3}
-C {devices/res.sym} 1430 -190 3 0 {name=R4
+C {res.sym} 1430 -190 3 0 {name=R4
 value=10k
 footprint=1206
 device=resistor
 m=1}
 C {transgate-full.sym} 1000 50 0 0 {name=XDTG4}
-C {devices/ipin.sym} 320 -300 1 0 {name=cntrl1 lab=cntrl1}
-C {devices/ipin.sym} 640 -300 1 0 {name=cntrl2 lab=cntrl2}
-C {devices/ipin.sym} 960 -300 1 0 {name=cntrl3 lab=cntrl3}
-C {devices/ipin.sym} 1280 -300 1 0 {name=cntrl4 lab=cntrl4}
-C {devices/ipin.sym} 200 -170 0 0 {name=in lab=in}
-C {devices/opin.sym} 1560 -170 0 0 {name=out lab=out}
-C {devices/ipin.sym} 200 -120 0 0 {name=gnd lab=gnd}
-C {devices/ipin.sym} 200 -90 0 0 {name=vbias lab=vbias}
-C {devices/ipin.sym} 200 -70 0 0 {name=vdd lab=vdd}
+C {ipin.sym} 320 -300 1 0 {name=pntrl1 lab=cntrl1}
+C {ipin.sym} 640 -300 1 0 {name=pntrl2 lab=cntrl2}
+C {ipin.sym} 960 -300 1 0 {name=pntrl3 lab=cntrl3}
+C {ipin.sym} 1280 -300 1 0 {name=pntrl4 lab=cntrl4}
+C {ipin.sym} 200 -170 0 0 {name=pn lab=in}
+C {opin.sym} 1560 -170 0 0 {name=put lab=out}
+C {ipin.sym} 200 -120 0 0 {name=pnd lab=gnd}
+C {ipin.sym} 200 -90 0 0 {name=pbias lab=vbias}
+C {ipin.sym} 200 -70 0 0 {name=pdd lab=vdd}
