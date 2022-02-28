@@ -1,4 +1,4 @@
-v {xschem version=2.9.9 file_version=1.2 }
+v {xschem version=3.0.0 file_version=1.2 }
 G {}
 K {type=subcircuit
 format="@name @pinlist @symname"
@@ -28,9 +28,11 @@ L 4 200 -70 205 -70 {}
 L 4 200 -70 200 -65 {}
 L 4 85 -65 90 -70 {}
 L 4 85 -70 90 -65 {}
-B 5 47.5 -112.5 52.5 -107.5 {name=in1
+L 4 50 -90 50 -80 {}
+L 4 50 -120 50 -110 {}
+B 5 47.5 -122.5 52.5 -117.5 {name=in1
 dir=in}
-B 5 47.5 -92.5 52.5 -87.5 {name=in2
+B 5 47.5 -82.5 52.5 -77.5 {name=in2
 dir=in}
 B 5 107.5 -162.5 112.5 -157.5 {name=vbias
 dir=in}

@@ -241,3 +241,16 @@ C {ipin.sym} 140 -440 0 0 {name=in1 lab=in1}
 C {ipin.sym} 980 -440 2 0 {name=in2 lab=in2}
 C {opin.sym} 360 -470 3 0 {name=out1 lab=out1}
 C {opin.sym} 760 -470 3 0 {name=out2 lab=out2}
+C {code.sym} 840 -170 0 0 {name=sT_MODELS
+only_toplevel=true
+format="tcleval( @value )"
+value="** manual skywater pdks install (with patches applied)
+* .lib \\\\$::SKYWATER_MODELS\\\\/models/sky130.lib.spice tt
+
+** opencircuitdesign pdks install
+.lib \\\\$::SKYWATER_MODELS\\\\/sky130.lib.spice tt
+
+.param mc_mm_switch=0
+.param mc_pr_switch=0
+"
+spice_ignore=false}
