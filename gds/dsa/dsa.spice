@@ -1,0 +1,76 @@
+** sch_path: /Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/attenuator/dsa.sch
+**.subckt dsa in gnd vdd ctr1 ctr2 ctr3 ctr4 out
+*.ipin in
+*.ipin gnd
+*.ipin vdd
+*.ipin ctr1
+*.ipin ctr2
+*.ipin ctr3
+*.ipin ctr4
+*.opin out
+XSPDT1 in ctr1 net1 net2 gnd vdd spdt
+R1 net2 net1 sky130_fd_pr__res_generic_po W=1 L=1 m=1
+XSPDT2 net2 ctr2 net3 net4 gnd vdd spdt
+R2 net4 net3 sky130_fd_pr__res_generic_po W=1 L=1 m=1
+XSPDT3 net4 ctr3 net5 net6 gnd vdd spdt
+R3 net6 net5 sky130_fd_pr__res_generic_po W=1 L=1 m=1
+XSPDT4 net6 ctr4 net7 out gnd vdd spdt
+R4 out net7 sky130_fd_pr__res_generic_po W=1 L=1 m=1
+**.ends
+
+* expanding   symbol:  /Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/attenuator/spdt.sym
+*+ # of pins=6
+** sym_path: /Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/attenuator/spdt.sym
+** sch_path: /Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/attenuator/spdt.sch
+.subckt spdt  in ctr out1 out2 gnd vdd
+*.ipin in
+*.ipin ctr
+*.ipin gnd
+*.ipin vdd
+*.opin out1
+*.opin out2
+XINV1 vdd ctr gnd net1 inverter
+XTG1 vdd ctr in gnd net1 out1 transgate
+XTG2 vdd net1 in gnd ctr out2 transgate
+XINV1 vdd ctr gnd net1 inverter
+.ends
+
+
+* expanding   symbol:
+*+  /Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/attenuator/inverter.sym # of pins=4
+** sym_path: /Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/attenuator/inverter.sym
+** sch_path: /Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/attenuator/inverter.sch
+.subckt inverter  vdd in gnd out
+*.ipin in
+*.ipin gnd
+*.ipin vdd
+*.opin out
+XM1 out in gnd gnd sky130_fd_pr__nfet_01v8 L=0.15 W=4 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 out in vdd vdd sky130_fd_pr__pfet_01v8 L=0.15 W=4 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:
+*+  /Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/attenuator/transgate.sym # of pins=6
+** sym_path: /Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/attenuator/transgate.sym
+** sch_path: /Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/attenuator/transgate.sch
+.subckt transgate  vdd ctr2 in gnd ctr1 out
+*.ipin in
+*.ipin ctr2
+*.ipin ctr1
+*.ipin vdd
+*.ipin gnd
+*.opin out
+XM1 in ctr1 out gnd sky130_fd_pr__nfet_01v8 L=0.15 W=4 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 in ctr2 out vdd sky130_fd_pr__pfet_01v8 L=0.15 W=4 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.end
