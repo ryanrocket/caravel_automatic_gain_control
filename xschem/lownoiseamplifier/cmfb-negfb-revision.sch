@@ -47,9 +47,9 @@ lab=gnd2}
 N 440 -490 440 -400 {
 lab=out1}
 N 680 -490 680 -400 {
-lab=#net3}
+lab=out2}
 N 480 -520 640 -520 {
-lab=#net4}
+lab=#net3}
 N 420 -520 440 -520 {
 lab=vdd2}
 N 420 -550 420 -520 {
@@ -71,52 +71,52 @@ lab=vdd2}
 N 560 -610 560 -580 {
 lab=vdd2}
 N 560 -520 560 -440 {
-lab=#net4}
+lab=#net3}
 N 440 -440 460 -440 {
 lab=out1}
 N 660 -440 680 -440 {
-lab=#net3}
+lab=out2}
 N 460 -440 470 -440 {
 lab=out1}
 N 530 -440 590 -440 {
-lab=#net4}
-N 650 -440 660 -440 {
 lab=#net3}
+N 650 -440 660 -440 {
+lab=out2}
 N 360 -440 440 -440 {
 lab=out1}
 N 680 -440 760 -440 {
-lab=#net3}
+lab=out2}
 N 360 -470 360 -440 {
 lab=out1}
 N 760 -470 760 -440 {
-lab=#net3}
+lab=out2}
 N 340 -440 360 -440 {
 lab=out1}
 N 760 -440 780 -440 {
-lab=#net3}
+lab=out2}
 N 240 -440 280 -440 {
-lab=#net5}
+lab=#net4}
 N 840 -440 880 -440 {
-lab=#net6}
+lab=#net5}
 N 140 -440 180 -440 {
 lab=in1}
 N 940 -440 980 -440 {
 lab=in2}
 N 860 -440 860 -370 {
-lab=#net6}
+lab=#net5}
 N 720 -370 860 -370 {
-lab=#net6}
+lab=#net5}
 N 260 -440 260 -370 {
-lab=#net5}
+lab=#net4}
 N 260 -370 400 -370 {
-lab=#net5}
+lab=#net4}
 N 380 -260 440 -260 {
 lab=#net2}
 N 260 -260 320 -260 {
 lab=vdd1}
 C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} 420 -370 0 0 {name=M1
 L=0.15
-W=1
+W=5
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -130,7 +130,7 @@ spiceprefix=X
 }
 C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} 700 -370 0 1 {name=M2
 L=0.15
-W=1
+W=5
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -144,7 +144,7 @@ spiceprefix=X
 }
 C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} 460 -230 0 1 {name=M3
 L=0.15
-W=1
+W=40
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -158,7 +158,7 @@ spiceprefix=X
 }
 C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} 660 -230 0 0 {name=M4
 L=0.15
-W=1
+W=40
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -172,7 +172,7 @@ spiceprefix=X
 }
 C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_01v8.sym} 460 -520 0 1 {name=M5
 L=0.15
-W=1
+W=16
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -186,7 +186,7 @@ spiceprefix=X
 }
 C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/pfet_01v8.sym} 660 -520 0 0 {name=M6
 L=0.15
-W=1
+W=16
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 

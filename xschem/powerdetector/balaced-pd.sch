@@ -123,7 +123,7 @@ spiceprefix=X
 }
 C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} 400 -210 0 1 {name=M2
 L=0.15
-W=1
+W=2
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
