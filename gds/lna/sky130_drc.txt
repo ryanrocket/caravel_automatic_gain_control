@@ -1021,7 +1021,7 @@
    <multiplicity>1</multiplicity>
    <image/>
    <values>
-    <value>polygon: (25.44,2.935;25.44,3.165;25.73,3.165;25.73,2.935)</value>
+    <value>polygon: (-3.815,-4.075;-3.815,-3.845;-3.525,-3.845;-3.525,-4.075)</value>
    </values>
   </item>
   <item>
@@ -1032,7 +1032,7 @@
    <multiplicity>1</multiplicity>
    <image/>
    <values>
-    <value>polygon: (21.6,2.935;21.6,3.165;21.89,3.165;21.89,2.935)</value>
+    <value>polygon: (-2.855,-4.075;-2.855,-3.845;-2.565,-3.845;-2.565,-4.075)</value>
    </values>
   </item>
   <item>
@@ -1043,7 +1043,7 @@
    <multiplicity>1</multiplicity>
    <image/>
    <values>
-    <value>polygon: (24.48,2.935;24.48,3.165;24.77,3.165;24.77,2.935)</value>
+    <value>polygon: (-1.895,-4.075;-1.895,-3.845;-1.605,-3.845;-1.605,-4.075)</value>
    </values>
   </item>
   <item>
@@ -1054,7 +1054,7 @@
    <multiplicity>1</multiplicity>
    <image/>
    <values>
-    <value>polygon: (23.52,2.935;23.52,3.165;23.81,3.165;23.81,2.935)</value>
+    <value>polygon: (-0.935,-4.075;-0.935,-3.845;-0.645,-3.845;-0.645,-4.075)</value>
    </values>
   </item>
   <item>
@@ -1065,7 +1065,7 @@
    <multiplicity>1</multiplicity>
    <image/>
    <values>
-    <value>polygon: (22.56,2.935;22.56,3.165;22.85,3.165;22.85,2.935)</value>
+    <value>polygon: (0.025,-4.075;0.025,-3.845;0.315,-3.845;0.315,-4.075)</value>
    </values>
   </item>
   <item>
@@ -1076,7 +1076,7 @@
    <multiplicity>1</multiplicity>
    <image/>
    <values>
-    <value>polygon: (24.96,8.485;24.96,8.715;25.25,8.715;25.25,8.485)</value>
+    <value>polygon: (-3.335,1.475;-3.335,1.705;-3.045,1.705;-3.045,1.475)</value>
    </values>
   </item>
   <item>
@@ -1087,7 +1087,7 @@
    <multiplicity>1</multiplicity>
    <image/>
    <values>
-    <value>polygon: (24,8.485;24,8.715;24.29,8.715;24.29,8.485)</value>
+    <value>polygon: (-2.375,1.475;-2.375,1.705;-2.085,1.705;-2.085,1.475)</value>
    </values>
   </item>
   <item>
@@ -1098,7 +1098,7 @@
    <multiplicity>1</multiplicity>
    <image/>
    <values>
-    <value>polygon: (23.04,8.485;23.04,8.715;23.33,8.715;23.33,8.485)</value>
+    <value>polygon: (-1.415,1.475;-1.415,1.705;-1.125,1.705;-1.125,1.475)</value>
    </values>
   </item>
   <item>
@@ -1109,7 +1109,7 @@
    <multiplicity>1</multiplicity>
    <image/>
    <values>
-    <value>polygon: (22.08,8.485;22.08,8.715;22.37,8.715;22.37,8.485)</value>
+    <value>polygon: (-0.455,1.475;-0.455,1.705;-0.165,1.705;-0.165,1.475)</value>
    </values>
   </item>
  </items>
