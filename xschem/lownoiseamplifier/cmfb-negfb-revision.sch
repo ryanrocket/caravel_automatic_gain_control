@@ -90,24 +90,12 @@ N 360 -470 360 -440 {
 lab=out1}
 N 760 -470 760 -440 {
 lab=out2}
-N 340 -440 360 -440 {
-lab=out1}
-N 760 -440 780 -440 {
-lab=out2}
-N 240 -440 280 -440 {
-lab=#net4}
-N 840 -440 880 -440 {
-lab=#net5}
-N 140 -440 180 -440 {
+N 220 -370 260 -370 {
 lab=in1}
-N 940 -440 980 -440 {
+N 860 -370 900 -370 {
 lab=in2}
-N 860 -440 860 -370 {
-lab=#net5}
 N 720 -370 860 -370 {
-lab=#net5}
-N 260 -440 260 -370 {
-lab=#net4}
+lab=in2}
 N 260 -370 400 -370 {
 lab=#net4}
 N 380 -260 440 -260 {
@@ -198,36 +186,6 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_generic_po.sym} 500 -440 1 1 {name=R1
-W=1
-L=1
-model=res_generic_po
-mult=1}
-C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_generic_po.sym} 620 -440 1 1 {name=R2
-W=1
-L=1
-model=res_generic_po
-mult=1}
-C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_generic_po.sym} 310 -440 1 1 {name=R3
-W=1
-L=1
-model=res_generic_po
-mult=1}
-C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_generic_po.sym} 810 -440 1 1 {name=R4
-W=1
-L=1
-model=res_generic_po
-mult=1}
-C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_generic_po.sym} 210 -440 1 1 {name=R5
-W=1
-L=1
-model=res_generic_po
-mult=1}
-C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_generic_po.sym} 910 -440 3 0 {name=R6
-W=1
-L=1
-model=res_generic_po
-mult=1}
 C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_generic_po.sym} 350 -260 1 1 {name=R7
 W=1
 L=1
@@ -237,8 +195,8 @@ C {ipin.sym} 560 -340 3 0 {name=gnd1 lab=gnd1}
 C {ipin.sym} 560 -130 3 0 {name=gnd2 lab=gnd2}
 C {ipin.sym} 260 -260 0 0 {name=vdd1 lab=vdd1}
 C {ipin.sym} 560 -610 1 0 {name=vdd2 lab=vdd2}
-C {ipin.sym} 140 -440 0 0 {name=in1 lab=in1}
-C {ipin.sym} 980 -440 2 0 {name=in2 lab=in2}
+C {ipin.sym} 220 -370 0 0 {name=in1 lab=in1}
+C {ipin.sym} 900 -370 2 0 {name=in2 lab=in2}
 C {opin.sym} 360 -470 3 0 {name=out1 lab=out1}
 C {opin.sym} 760 -470 3 0 {name=out2 lab=out2}
 C {code.sym} 840 -170 0 0 {name=sT_MODELS
@@ -254,3 +212,15 @@ value="** manual skywater pdks install (with patches applied)
 .param mc_pr_switch=0
 "
 spice_ignore=false}
+C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_high_po_0p35.sym} 620 -440 3 0 {name=R8
+W=0.35
+L=1
+model=res_high_po_0p35
+spiceprefix=X
+mult=1}
+C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_high_po_0p35.sym} 500 -440 3 0 {name=R1
+W=0.35
+L=1
+model=res_high_po_0p35
+spiceprefix=X
+mult=1}
