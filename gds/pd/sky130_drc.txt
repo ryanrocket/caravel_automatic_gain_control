@@ -1013,16 +1013,5 @@
   </cell>
  </cells>
  <items>
-  <item>
-   <tags/>
-   <category>'li.3'</category>
-   <cell>TOP</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <image/>
-   <values>
-    <value>edge-pair: (6.99,3.285;7.16,3.285)|(7.256,3.425;6.894,3.425)</value>
-   </values>
-  </item>
  </items>
 </report-database>
