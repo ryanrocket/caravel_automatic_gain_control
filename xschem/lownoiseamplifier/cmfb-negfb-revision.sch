@@ -102,6 +102,8 @@ N 380 -260 440 -260 {
 lab=#net2}
 N 260 -260 320 -260 {
 lab=vdd1}
+N 620 -420 620 -370 {}
+N 500 -420 500 -370 {}
 C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/nfet_01v8.sym} 420 -370 0 0 {name=M1
 L=0.15
 W=5

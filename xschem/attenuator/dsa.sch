@@ -106,25 +106,25 @@ C {ipin.sym} 590 -340 1 0 {name=ctr2 lab=ctr2}
 C {ipin.sym} 910 -340 1 0 {name=ctr3 lab=ctr3}
 C {ipin.sym} 1230 -340 1 0 {name=ctr4 lab=ctr4}
 C {opin.sym} 1480 -220 0 0 {name=out lab=out}
-C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_xhigh_po_0p35.sym} 410 -240 3 0 {name=R1
+C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_xhigh_po_0p35.sym} 410 -240 3 1 {name=R1
 W=0.35
 L=1
 model=res_xhigh_po_0p35
 spiceprefix=X
 mult=1}
-C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_xhigh_po_0p35.sym} 730 -240 3 0 {name=R2
+C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_xhigh_po_0p35.sym} 730 -240 1 0 {name=R2
 W=0.35
 L=1
 model=res_xhigh_po_0p35
 spiceprefix=X
 mult=1}
-C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_xhigh_po_0p35.sym} 1050 -240 3 0 {name=R3
+C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_xhigh_po_0p35.sym} 1050 -240 3 1 {name=R3
 W=0.35
 L=1
 model=res_xhigh_po_0p35
 spiceprefix=X
 mult=1}
-C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_xhigh_po_0p35.sym} 1370 -240 3 0 {name=R4
+C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_xhigh_po_0p35.sym} 1370 -240 3 1 {name=R4
 W=0.35
 L=1
 model=res_xhigh_po_0p35
