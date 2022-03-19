@@ -3,32 +3,8 @@
  <description>SKY130 DRC runset</description>
  <original-file/>
  <generator>drc: script='/Users/ryanwans/.klayout/tech/sky130/drc/sky130.lydrc'</generator>
- <top-cell>TOP</top-cell>
+ <top-cell>user_analog_project_wrapper_empty</top-cell>
  <tags>
-  <tag>
-   <name>red</name>
-   <description/>
-  </tag>
-  <tag>
-   <name>green</name>
-   <description/>
-  </tag>
-  <tag>
-   <name>blue</name>
-   <description/>
-  </tag>
-  <tag>
-   <name>yellow</name>
-   <description/>
-  </tag>
-  <tag>
-   <name>waived</name>
-   <description/>
-  </tag>
-  <tag>
-   <name>important</name>
-   <description/>
-  </tag>
  </tags>
  <categories>
   <category>
@@ -1030,111 +1006,12 @@
  </categories>
  <cells>
   <cell>
-   <name>TOP</name>
+   <name>user_analog_project_wrapper_empty</name>
    <variant/>
    <references>
    </references>
   </cell>
  </cells>
  <items>
-  <item>
-   <tags/>
-   <category>'m1.3ab'</category>
-   <cell>TOP</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <image/>
-   <values>
-    <value>edge-pair: (97.675,-57.9;97.675,-55.34)/(97.675,-55.62;97.675,-57.62)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'m1.3ab'</category>
-   <cell>TOP</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <image/>
-   <values>
-    <value>edge-pair: (126.175,-55.34;126.175,-57.9)/(126.175,-57.62;126.175,-55.62)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'m1.3ab'</category>
-   <cell>TOP</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <image/>
-   <values>
-    <value>edge-pair: (151.175,-55.345;151.175,-57.905)/(151.175,-57.625;151.175,-55.625)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'m1.3ab'</category>
-   <cell>TOP</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <image/>
-   <values>
-    <value>edge-pair: (72.675,-57.9;72.675,-55.34)/(72.675,-55.62;72.675,-57.62)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'m4.5ab'</category>
-   <cell>TOP</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <image/>
-   <values>
-    <value>edge-pair: (16.175,4.06;16.175,1.26)/(16.175,1.66;16.175,3.66)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'m4.5ab'</category>
-   <cell>TOP</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <image/>
-   <values>
-    <value>edge-pair: (16.175,-16.73;16.175,-19.53)/(16.175,-19.13;16.175,-17.13)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'m4.5ab'</category>
-   <cell>TOP</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <image/>
-   <values>
-    <value>edge-pair: (234.86,55.495;232.06,55.495)/(232.46,55.495;234.46,55.495)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'m4.5ab'</category>
-   <cell>TOP</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <image/>
-   <values>
-    <value>edge-pair: (296.505,-6.375;296.505,-3.575)/(296.505,-3.975;296.505,-5.975)</value>
-   </values>
-  </item>
-  <item>
-   <tags/>
-   <category>'m4.5ab'</category>
-   <cell>TOP</cell>
-   <visited>false</visited>
-   <multiplicity>1</multiplicity>
-   <image/>
-   <values>
-    <value>edge-pair: (232.06,-71.41;234.86,-71.41)/(234.46,-71.41;232.46,-71.41)</value>
-   </values>
-  </item>
  </items>
 </report-database>
