@@ -3,17 +3,15 @@
 
 --- 
 
-Automatic Gain Control project submission to the Google-funded Open-MPW program. 
-
 ## Introduction 
 
-Automatic Gain Control is a feedback loop used in receiver architectures for signal amplification. Its primary usage is in environments where the relative signal strength is variable and could pose oversaturation on the receiving amplifier, such as that of radar recievers. 
+Automatic Gain Control is a feedback loop used in receiver architectures for dynamic signal amplification. Its primary usage is in environments where the relative signal strength is variable and could cause oversaturation, such as that of radar recievers. 
 
 ### Architecture 
 
 ![architecture](docs/img/block_diagram.png) 
 
-In order to achieve optimal amplification from the LNA, a digitally-stepped attenuator is placed preceeding the LNA to attenuate any signal over a specific saturation threshold. After the signal is amplified, the output is coupled into a power detector circuit, which is then fed into an ADC and back into the DSA to drive the signal attenuation. Once the power detector is able to realize oversaturation at the output, it will drive the DSA to further attenuate the signal, reducing the power output. 
+In order to achieve optimal amplification from the LNA, a digitally-stepped attenuator is placed preceeding the LNA to attenuate any signal over a specific Vpp threshold. After the signal is amplified, the output is coupled into a power detector circuit, which is then fed into an ADC and back into the DSA to drive the signal attenuation. Once the power detector is able to realize oversaturation at the output, it will drive the DSA to further attenuate the signal, reducing the power output, and thus pulling the LNA output back out of oversaturation. 
 
 ### Implementation 
 
