@@ -94,6 +94,16 @@ N 240 -120 560 -120 {
 lab=vdd}
 N 160 -120 240 -120 {
 lab=vdd}
+N 410 -230 410 -140 {
+lab=gnd}
+N 730 -220 730 -140 {
+lab=gnd}
+N 1050 -220 1050 -140 {
+lab=gnd}
+N 1260 -140 1370 -140 {
+lab=gnd}
+N 1370 -220 1370 -140 {
+lab=gnd}
 C {/Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/attenuator/spdt.sym} -40 40 0 0 {name=XSPDT1}
 C {/Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/attenuator/spdt.sym} 280 40 0 0 {name=XSPDT2}
 C {/Volumes/WORK_DRIVE/caravel_automatic_gain_control/xschem/attenuator/spdt.sym} 600 40 0 0 {name=XSPDT3}
@@ -106,25 +116,25 @@ C {ipin.sym} 590 -340 1 0 {name=ctr2 lab=ctr2}
 C {ipin.sym} 910 -340 1 0 {name=ctr3 lab=ctr3}
 C {ipin.sym} 1230 -340 1 0 {name=ctr4 lab=ctr4}
 C {opin.sym} 1480 -220 0 0 {name=out lab=out}
-C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_xhigh_po_0p35.sym} 410 -240 3 1 {name=R1
+C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_xhigh_po_0p35.sym} 410 -240 1 1 {name=R1
 W=0.35
 L=1
 model=res_xhigh_po_0p35
 spiceprefix=X
 mult=1}
-C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_xhigh_po_0p35.sym} 730 -240 1 0 {name=R2
+C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_xhigh_po_0p35.sym} 730 -240 3 0 {name=R2
 W=0.35
 L=1
 model=res_xhigh_po_0p35
 spiceprefix=X
 mult=1}
-C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_xhigh_po_0p35.sym} 1050 -240 3 1 {name=R3
+C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_xhigh_po_0p35.sym} 1050 -240 1 1 {name=R3
 W=0.35
 L=1
 model=res_xhigh_po_0p35
 spiceprefix=X
 mult=1}
-C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_xhigh_po_0p35.sym} 1370 -240 3 1 {name=R4
+C {/Volumes/WORK_DRIVE/open_pdks/sky130/sky130A/libs.tech/xschem/sky130_fd_pr/res_xhigh_po_0p35.sym} 1370 -240 1 1 {name=R4
 W=0.35
 L=1
 model=res_xhigh_po_0p35
